@@ -1,35 +1,75 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import './App.css';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import WhatIs from './components/WhatIs';
+import Why from './components/Why';
+import Features from './components/Features';
+import Audit from './components/Audit';
+import DesktopCarousel from './components/DesktopCarousel';
+import OnlineControll from './components/OnlineControll.tsx';
+import Visualization from './components/Visualization';
+import Contact from './components/Contact';
+import WaveBackground from './components/WaveBackground.tsx';
+import Footer from './components/Footer';
 
 function App() {
-  const [count, setCount] = useState(0)
+  useEffect(() => {
+    // Initialize GSAP ScrollTrigger
+    const initGSAP = async () => {
+      const { gsap } = await import('gsap');
+      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Smooth reveal for each main section on scroll
+      const sections = document.querySelectorAll('main > section');
+      sections.forEach((section) => {
+        gsap.fromTo(
+          section,
+          { opacity: 0, y: 40 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.9,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: section as Element,
+              start: 'top 85%',
+              end: 'bottom 15%',
+              toggleActions: 'play none none reverse'
+            }
+          }
+        );
+      });
+    };
+    
+    initGSAP();
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      <div className="App">
+        <Header />
+        <WaveBackground />
+        <main>
+          <Hero />
+          <WhatIs />
+          <Why />
+          <Features />
+          <DesktopCarousel />
+          <OnlineControll />
+          <Audit />
+          <Visualization />
+          <Contact />
+        </main>
+        <Footer />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
