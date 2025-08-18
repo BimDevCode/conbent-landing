@@ -224,17 +224,16 @@ const Contact: React.FC = () => {
     setMessage(null);
 
     try {
-      // EmailJS configuration - you'll need to set these up
       const result = await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        'service_ypxvv7b', // Replace with your EmailJS service ID
+        'template_4cx8cxj', // Replace with your EmailJS template ID
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-          to_email: 'your-email@example.com' // Replace with your email
+          to_email: 'nikolaysobolewskij@gmail.com' // Replace with your email
         },
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+        'lTlc9fl8Mkx58mz8V' // Replace with your EmailJS public key
       );
 
       if (result.status === 200) {
