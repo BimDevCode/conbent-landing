@@ -277,7 +277,7 @@ const DesktopCarousel: React.FC = () => {
             Engineer <span>Desktop Solution</span>
           </SectionTitle>
           <SectionSubtitle>
-            Work Securely, Even Offline
+            Fisrts Part of Conbent Solution
           </SectionSubtitle>
         </SectionHeader>
 

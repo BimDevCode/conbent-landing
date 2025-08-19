@@ -303,9 +303,8 @@ const OnlineControll: React.FC = () => {
     <Section id="online-controll" ref={sectionRef}>
       <Container>
         <SectionHeader data-anim="head">
-
           <SectionTitle>Coordinator<span> Web Solution</span></SectionTitle>
-          <SectionSubtitle>Your Project Insights, Anywhere</SectionSubtitle>
+          <SectionSubtitle>Second Part of Conbent Solution</SectionSubtitle>
         </SectionHeader>
         <ContentGrid>
           <CarouselContainer>

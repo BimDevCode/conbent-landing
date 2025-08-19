@@ -154,10 +154,13 @@ const Footer: React.FC = () => {
             <ColTitle>Contact</ColTitle>
             <LinkList>
               <li>
-                <InlineLink href="mailto:hello@conbent.com">hello@conbent.com</InlineLink>
+                <InlineLink href="mailto:nikolaysobolewskij@gmail.com">hello@conbent.com</InlineLink>
               </li>
               <li>
                 <FooterLink onClick={() => scrollToSection('contact')}>Request a Demo</FooterLink>
+              </li>
+              <li>
+                <FooterLink onClick={() => scrollToSection('contact')}>Powered by Conbent</FooterLink>
               </li>
             </LinkList>
           </Col>
@@ -166,6 +169,7 @@ const Footer: React.FC = () => {
         <BottomBar>
           <div>© {currentYear} Conbent. All rights reserved.</div>
           <BottomLinks>
+            <InlineLink href="#" onClick={(e) => e.preventDefault()}>Project by Mikalai Sabaleuski</InlineLink>
             <InlineLink href="#" onClick={(e) => e.preventDefault()}>Privacy</InlineLink>
             <InlineLink href="#" onClick={(e) => e.preventDefault()}>Terms</InlineLink>
           </BottomLinks>

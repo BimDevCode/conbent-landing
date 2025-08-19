@@ -127,7 +127,7 @@ const Header: React.FC = () => {
           <NavLink onClick={() => scrollToSection('what-is')}>Solution</NavLink>
           <NavLink onClick={() => scrollToSection('features')}>Features</NavLink>
           <NavLink onClick={() => scrollToSection('desktop')}>Desktop Solution</NavLink>
-          <NavLink onClick={() => scrollToSection('online-controll')}>Online Solution</NavLink>
+          <NavLink onClick={() => scrollToSection('online-controll')}>Web Solution</NavLink>
           <NavLink onClick={() => scrollToSection('audit')}>Audit</NavLink>
           <NavLink onClick={() => scrollToSection('contact')}>Contact</NavLink>
         </NavLinks>

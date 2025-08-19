@@ -83,7 +83,7 @@ const BenefitItem = styled.li`
   color: #ffffff;
   
   &:before {
-    content: "✓";
+    content: "○";
     color: #0f8bfd;
     font-weight: bold;
     margin-right: 0.75rem;
