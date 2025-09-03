@@ -2,6 +2,8 @@
 
 A modern, responsive landing page for CONBENT - a BIM project analysis software. Built with React, TypeScript, and modern web technologies.
 
+https://bimdevcode.github.io/conbent-landing/
+
 ## 🚀 Features
 
 - **Modern Design**: Corporate dark mode with glassmorphism UI
